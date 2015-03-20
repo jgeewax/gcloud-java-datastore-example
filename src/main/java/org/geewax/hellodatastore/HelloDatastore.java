@@ -17,9 +17,9 @@ public class HelloDatastore {
 
     Key key = Key.builder("dataset", "Person", "Jim").build();
     Entity.Builder builder = Entity.builder(key);
-    ((Entity.Builder) builder.set("f", 30L)).set("name", 3L);
+    builder.set("f", 30L).set("name", 3L);
     builder.set("name", "Jim");
-    System.out.println(builder.set("f", 30L).getClass());
+    System.out.println(builder.set("f", 30L));
     /*
     DatastoreServiceOptions options = DatastoreServiceOptions.builder().dataset(DATASET).build();
     DatastoreService datastore = DatastoreServiceFactory.getDefault(options);
